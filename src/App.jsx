@@ -7,6 +7,9 @@ import Pilot from './pages/Pilot';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import { Privacy, Terms } from './pages/Legal';
+import { routeRegistry } from './i18n/routes';
+
+const pageComponents = { home: Home, product: Product, pilot: Pilot, about: About, contact: Contact, privacy: Privacy, terms: Terms };
 
 export default function App() {
   return (
@@ -14,13 +17,10 @@ export default function App() {
       <ScrollToTop />
       <Routes>
         <Route element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="product" element={<Product />} />
-          <Route path="pilot" element={<Pilot />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="privacy" element={<Privacy />} />
-          <Route path="terms" element={<Terms />} />
+          {Object.entries(routeRegistry).flatMap(([page, paths]) => Object.entries(paths).map(([locale, path]) => {
+            const Page = pageComponents[page];
+            return <Route key={`${locale}-${page}`} path={path} element={<Page />} />;
+          }))}
         </Route>
       </Routes>
     </>

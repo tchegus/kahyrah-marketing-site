@@ -1,21 +1,19 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { CTASection, Eyebrow, Icon } from '../components/PageElements';
+import { localizedPath } from '../i18n/routes';
 
-const principles = [
-  ['building', 'Built for public service', 'Technology should make council operations clearer and more dependable for the people delivering them.'],
-  ['workflow', 'Practical by design', 'We begin with real workflows, field constraints and measurable operational needs—not abstract transformation language.'],
-  ['chart', 'Visibility that drives action', 'Good data is useful when it helps teams understand what happened, why it matters and what to do next.'],
-];
+const principleIcons = ['building', 'workflow', 'chart'];
 
 export default function About() {
+  const { t, i18n } = useTranslation();
+  const locale = i18n.resolvedLanguage === 'fr' ? 'fr' : 'en';
+  const principles = t('about.principles.items', { returnObjects: true });
   return <>
-    <section className="page-hero about-page-hero section-pad"><div className="container narrow-hero"><Eyebrow>About Kahyrah</Eyebrow><h1>Civic technology for operational visibility</h1><p>Kahyrah builds practical digital tools for councils and local authorities. Our focus is replacing manual operational processes with clear workflows, real-time visibility and reliable data.</p></div></section>
-
-    <section className="section-pad about-story"><div className="container about-story-grid"><div><span className="statement-mark">K</span><h2>Modernising the work behind essential local services</h2></div><div><p className="large-copy">Councils manage complex, high-frequency operations with limited time and many moving parts. Too often, the systems supporting that work are fragmented or manual.</p><p>Kahyrah creates civic technology that respects the reality of public-sector delivery: field teams need focused workflows, supervisors need timely signals and decision makers need reliable evidence.</p><p>Council Revenue Platform is our first product—and the beginning of a broader commitment to practical digital infrastructure for local authorities.</p></div></div></section>
-
-    <section className="section-pad principles-section"><div className="container"><div className="principles-header"><Eyebrow>How we work</Eyebrow><h2>Serious software. Grounded implementation.</h2></div><div className="principles-grid">{principles.map(([icon, title, copy]) => <article key={title}><div className="icon-wrap"><Icon name={icon} /></div><h3>{title}</h3><p>{copy}</p></article>)}</div></div></section>
-
-    <section className="section-pad focus-section"><div className="container focus-grid"><div><Eyebrow>Our focus</Eyebrow><h2>Where technology meets day-to-day council operations</h2><Link className="arrow-link" to="/product">Explore our flagship product <span>→</span></Link></div><div className="focus-tags"><span>Civic technology</span><span>Revenue visibility</span><span>Field operations</span><span>Digital transformation</span><span>Practical implementation</span><span>Reliable data</span></div></div></section>
-    <CTASection title="Let’s improve council operations together" copy="Talk to Kahyrah about the operational challenges your authority is ready to modernise." />
+    <section className="page-hero about-page-hero section-pad"><div className="container narrow-hero"><Eyebrow>{t('about.hero.eyebrow')}</Eyebrow><h1>{t('about.hero.title')}</h1><p>{t('about.hero.copy')}</p><p className="about-belief">{t('about.hero.belief')}</p></div></section>
+    <section className="section-pad about-story"><div className="container about-story-grid"><div><span className="statement-mark">K</span><h2>{t('about.story.title')}</h2></div><div><p className="large-copy">{t('about.story.lead')}</p><p>{t('about.story.copy1')}</p><p>{t('about.story.copy2')}</p></div></div></section>
+    <section className="section-pad principles-section"><div className="container"><div className="principles-header"><Eyebrow>{t('about.principles.eyebrow')}</Eyebrow><h2>{t('about.principles.title')}</h2></div><div className="principles-grid">{principles.map((item, index) => <article key={item.title}><div className="icon-wrap"><Icon name={principleIcons[index]} /></div><h3>{item.title}</h3><p>{item.copy}</p></article>)}</div></div></section>
+    <section className="section-pad focus-section"><div className="container focus-grid"><div><Eyebrow>{t('about.focus.eyebrow')}</Eyebrow><h2>{t('about.focus.title')}</h2><Link className="arrow-link" to={localizedPath('product', locale)}>{t('about.focus.link')} <span>→</span></Link></div><div className="focus-tags">{t('about.focus.tags', { returnObjects: true }).map((tag) => <span key={tag}>{tag}</span>)}</div></div></section>
+    <CTASection title={t('about.cta.title')} copy={t('about.cta.copy')} eyebrow={t('about.cta.eyebrow')} primaryLabel={t('about.cta.primary')} secondaryLabel={t('about.cta.secondary')} />
   </>;
 }

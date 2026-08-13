@@ -1,80 +1,142 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Eyebrow, Icon } from '../components/PageElements';
+import { localizedPath } from '../i18n/routes';
+import marketPhotograph from '../../docs/image/standalone-market-photograph.png';
 
 const imageBase = '/images/app';
-
-const capabilities = [
-  { icon: 'qr', title: 'QR Merchant Verification', copy: 'Generate and print durable QR cards for assigned merchants, creating a simple daily verification point for field agents.', image: 'mobile-scanning.webp.png', alt: 'Kahyrah mobile QR scanner beside a council merchant assignment card' },
-  { icon: 'presence', title: 'Presence Tracking', copy: 'Track expected, present and absent merchants by business date—with the operational context supervisors need.', image: 'presence-tracking.webp.png', alt: 'Kahyrah presence dashboard showing expected, present and absent merchants' },
-  { icon: 'collection', title: 'Collection Workflow', copy: 'Enable agents to record collections, preserve supporting context and submit completed sessions for supervisor review.', image: 'collection-workflow.webp.png', alt: 'Kahyrah collection workflow for recording and reviewing merchant payments' },
-  { icon: 'recovery', title: 'Payment Recovery Monitoring', copy: 'Track failed automatic payments and ensure outstanding recovery amounts remain visible until they are resolved.', image: 'payment-recovery-monitoring.webp.png', alt: 'Kahyrah payment recovery monitoring view showing failed payments and outstanding recovery amounts' },
-  { icon: 'alert', title: 'Alerts Management', copy: 'Generate missing merchant alerts, acknowledge follow-up activity and keep open operational issues visible.', image: 'alerts-management-new.webp.png', alt: 'Kahyrah alerts management view showing operational issues and follow-up activity' },
-  { icon: 'chart', title: 'Revenue Reconciliation', copy: 'Compare expected revenue, operational collections and remaining gaps across areas and business dates.', image: 'revenue-reconciliation.webp.png', alt: 'Kahyrah revenue reconciliation dashboard with totals and merchant collection details', portrait: true },
-  { icon: 'audit', title: 'Audit Trail', copy: 'Retain traceability for important platform actions and support accountable operational review.', image: 'audit-platform.webp.png', alt: 'Kahyrah audit platform showing a traceable history of operational actions' },
+const capabilityData = [
+  ['qr', 'mobile-scanning.webp.png'],
+  ['presence', 'presence-tracking.webp.png'],
+  ['collection', 'collection-workflow.webp.png'],
+  ['recovery', 'payment-recovery-monitoring.webp.png'],
+  ['alert', 'alerts-management-new.webp.png'],
+  ['chart', 'revenue-reconciliation.webp.png'],
+  ['metric', 'dashboard-overview.webp.png'],
+  ['audit', 'audit-platform.webp.png'],
 ];
 
-function ProductImage({ src, alt, eager = false, portrait = false }) {
+function ProductImage({ src, alt, eager = false, portrait = false, wide = false }) {
   return (
-    <div className={`product-image-frame${portrait ? ' product-image-frame-portrait' : ''}`}>
-      <img src={`${imageBase}/${src}`} alt={alt} width={portrait ? 1024 : 1536} height={portrait ? 1536 : 1024} loading={eager ? 'eager' : 'lazy'} fetchPriority={eager ? 'high' : 'auto'} decoding="async" />
+    <div className={`product-image-frame${portrait ? ' product-image-frame-portrait' : ''}${wide ? ' product-image-frame-wide' : ''}`}>
+      <img
+        src={`${imageBase}/${src}`}
+        alt={alt}
+        width={wide ? 1800 : portrait ? 1024 : 1536}
+        height={wide ? 960 : portrait ? 1536 : 1024}
+        loading={eager ? 'eager' : 'lazy'}
+        fetchPriority={eager ? 'high' : 'auto'}
+        decoding="async"
+      />
     </div>
   );
 }
 
 export default function Product() {
+  const { t, i18n } = useTranslation();
+  const locale = i18n.resolvedLanguage === 'fr' ? 'fr' : 'en';
+  const heroStrip = t('product.hero.strip', { returnObjects: true });
+  const capabilities = t('product.capabilities.items', { returnObjects: true });
+
   return (
     <>
-      <section className="page-hero product-page-hero section-pad">
-        <div className="container narrow-hero">
-          <Eyebrow>Kahyrah’s flagship product</Eyebrow>
-          <h1>Council Revenue Platform</h1>
-          <p>A pilot-ready platform for merchant presence verification, revenue collection tracking and supervisor reconciliation.</p>
-          <div className="hero-actions">
-            <Link className="button button-primary button-large" to="/contact">Request a Pilot</Link>
-            <a className="button button-secondary button-large" href="#capabilities">Explore Capabilities</a>
-          </div>
+      <section className="product-hero-v3" aria-labelledby="product-hero-title">
+        <div className="product-hero-photo" aria-hidden="true">
+          <img src={marketPhotograph} alt="" />
         </div>
-      </section>
-
-      <section className="product-showcase" aria-labelledby="dashboard-preview-title">
-        <div className="container">
-          <figure className="product-preview-card">
-            <ProductImage src="dashboard-overview.webp.png" alt="Kahyrah operations dashboard showing revenue, collections, merchant presence and alerts" eager />
-            <figcaption><span>Product preview</span><div><h2 id="dashboard-preview-title">Operational dashboard</h2><p>A single view of expected revenue, collections, presence and open alerts.</p></div></figcaption>
-          </figure>
+        <div className="product-hero-overlay" />
+        <div className="container product-hero-v3-inner">
+          <div className="product-hero-copy">
+            <Eyebrow>{t('product.hero.eyebrow')}</Eyebrow>
+            <h1 id="product-hero-title">{t('product.hero.title')}</h1>
+            <p className="product-hero-proposition">{t('product.hero.proposition')}</p>
+            <p>{t('product.hero.copy')}</p>
+            <div className="hero-actions">
+              <Link className="button button-primary button-large" to={localizedPath('contact', locale)}>{t('product.hero.primary')}</Link>
+              <a className="button button-secondary button-large" href="#capabilities">{t('product.hero.secondary')} <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <img className="product-hero-accessible-image" src={marketPhotograph} alt={t('product.hero.imageAlt')} />
+        </div>
+        <div className="container product-hero-strip" aria-label={t('product.hero.secondary')}>
+          {heroStrip.map((item) => (
+            <article key={item.title}>
+              <span><Icon name={item.icon} /></span>
+              <div>
+                <h2>{item.title}</h2>
+                <p>{item.copy}</p>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
       <section className="section-pad product-capabilities" id="capabilities">
         <div className="container">
           <div className="product-capability-header">
-            <div><Eyebrow>Core Operational Capabilities</Eyebrow><h2>One operational platform for council revenue management</h2></div>
-            <p>Kahyrah gives councils one connected platform to manage daily revenue operations—from verified field activity and collections through payment recovery, financial reconciliation, management reporting and complete audit traceability.</p>
+            <div>
+              <Eyebrow>{t('product.capabilities.eyebrow')}</Eyebrow>
+              <h2>{t('product.capabilities.title')}</h2>
+            </div>
+            <p>{t('product.capabilities.copy')}</p>
           </div>
+
           <div className="capability-story">
-            {capabilities.map((capability, index) => (
-              <article className="capability-feature" key={capability.title}>
-                <div className="capability-feature-copy">
-                  <span className="capability-number">{String(index + 1).padStart(2, '0')}</span>
-                  <div className="icon-wrap"><Icon name={capability.icon} /></div>
-                  <h3>{capability.title}</h3>
-                  <p>{capability.copy}</p>
-                </div>
-                <ProductImage src={capability.image} alt={capability.alt} portrait={capability.portrait} />
-              </article>
-            ))}
+            {capabilities.map((item, index) => {
+              const [icon, image, portrait] = capabilityData[index];
+              const number = String(index + 1).padStart(2, '0');
+
+              if (index === 6) {
+                return (
+                  <article className="capability-dashboard" key={item.title}>
+                    <div className="capability-dashboard-heading">
+                      <div>
+                        <span className="capability-number">{number}</span>
+                        <div className="icon-wrap"><Icon name={icon} /></div>
+                        <p className="capability-dashboard-kicker">{item.title}</p>
+                        <h3>{item.heading}</h3>
+                      </div>
+                      <p>{item.copy}</p>
+                    </div>
+                    <ProductImage src={image} alt={item.alt} wide />
+                    <div className="dashboard-indicator-grid">
+                      {item.indicators.map((indicator) => (
+                        <article key={indicator.title}>
+                          <h4>{indicator.title}</h4>
+                          <p>{indicator.copy}</p>
+                        </article>
+                      ))}
+                    </div>
+                  </article>
+                );
+              }
+
+              return (
+                <article className="capability-feature" key={item.title}>
+                  <div className="capability-feature-copy">
+                    <span className="capability-number">{number}</span>
+                    <div className="icon-wrap"><Icon name={icon} /></div>
+                    <h3>{item.title}</h3>
+                    <p>{item.copy}</p>
+                  </div>
+                  <ProductImage src={image} alt={item.alt} portrait={portrait} />
+                </article>
+              );
+            })}
           </div>
+
           <section className="supporting-capabilities" aria-labelledby="supporting-capabilities-title">
             <div className="supporting-capabilities-heading">
-              <span>Platform layer</span>
-              <h2 id="supporting-capabilities-title">Supporting Platform Capabilities</h2>
+              <span>{t('product.supporting.label')}</span>
+              <h2 id="supporting-capabilities-title">{t('product.supporting.title')}</h2>
             </div>
             <article className="business-metrics-card">
               <div className="icon-wrap"><Icon name="metric" /></div>
               <div>
-                <span className="coming-soon-badge">Coming Soon</span>
-                <h3>Operational Business Reporting</h3>
-                <p>Transform operational data into executive-ready dashboards and reports for supervisors, finance teams and council management through Grafana-powered business reporting.</p>
+                <span className="coming-soon-badge">{t('product.supporting.badge')}</span>
+                <h3>{t('product.supporting.capability')}</h3>
+                <p>{t('product.supporting.copy')}</p>
+                <p><strong>{t('product.supporting.view')}</strong> — {t('product.supporting.supportingText')}</p>
               </div>
             </article>
           </section>
@@ -83,21 +145,25 @@ export default function Product() {
 
       <section className="section-pad mobile-scanning-section">
         <div className="container mobile-scanning-grid">
-          <div className="mobile-scanning-copy"><Eyebrow>Built for the field</Eyebrow><h2>Scan, verify and keep moving</h2><p>Fast, focused QR verification gives field agents a clear daily touchpoint while printable cards keep merchant identity and place assignments consistent.</p></div>
-          <ProductImage src="mobile-scanning.webp.png" alt="Mobile QR verification screen and printable Kahyrah council merchant card" />
+          <div className="mobile-scanning-copy">
+            <Eyebrow>{t('product.mobile.eyebrow')}</Eyebrow>
+            <h2>{t('product.mobile.title')}</h2>
+            <p>{t('product.mobile.copy')}</p>
+          </div>
+          <ProductImage src="mobile-scanning.webp.png" alt={t('product.mobile.alt')} />
         </div>
       </section>
 
       <section className="cta-band section-pad">
         <div className="container cta-panel">
           <div>
-            <Eyebrow light>Build the next pilot with us</Eyebrow>
-            <h2>See Council Revenue Platform in a live pilot</h2>
-            <p>Start with a focused operating area and evaluate the workflow using your council’s real pilot data.</p>
+            <Eyebrow light>{t('product.cta.eyebrow')}</Eyebrow>
+            <h2>{t('product.cta.title')}</h2>
+            <p>{t('product.cta.copy')}</p>
           </div>
           <div className="cta-actions">
-            <Link className="button button-light" to="/contact">Request a Pilot</Link>
-            <Link className="button button-ghost-light" to="/pilot">Learn More</Link>
+            <Link className="button button-light" to={localizedPath('contact', locale)}>{t('product.cta.primary')}</Link>
+            <Link className="button button-ghost-light" to={localizedPath('pilot', locale)}>{t('product.cta.secondary')}</Link>
           </div>
         </div>
       </section>

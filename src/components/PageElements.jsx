@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { localizedPath } from '../i18n/routes';
 
 export function Eyebrow({ children, light = false }) {
   return <div className={light ? 'eyebrow eyebrow-light' : 'eyebrow'}>{children}</div>;
@@ -31,18 +33,20 @@ export function Check({ children }) {
   );
 }
 
-export function CTASection({ title = 'Ready to modernise daily revenue operations?', copy = 'Talk to Kahyrah about running a structured council pilot.' }) {
+export function CTASection({ title, copy, eyebrow, primaryLabel, secondaryLabel }) {
+  const { t, i18n } = useTranslation();
+  const locale = i18n.resolvedLanguage === 'fr' ? 'fr' : 'en';
   return (
     <section className="cta-band section-pad">
       <div className="container cta-panel">
         <div>
-          <Eyebrow light>Build the next pilot with us</Eyebrow>
-          <h2>{title}</h2>
-          <p>{copy}</p>
+          <Eyebrow light>{eyebrow || t('common.buildPilot')}</Eyebrow>
+          <h2>{title || t('common.defaultCtaTitle')}</h2>
+          <p>{copy || t('common.defaultCtaCopy')}</p>
         </div>
         <div className="cta-actions">
-          <Link className="button button-light" to="/contact">Request a Pilot</Link>
-          <a className="button button-ghost-light" href="mailto:contact@kahyrah.com">Contact Us</a>
+          <Link className="button button-light" to={localizedPath('contact', locale)}>{primaryLabel || t('common.requestPilot')}</Link>
+          <a className="button button-ghost-light" href="mailto:contact@kahyrah.com">{secondaryLabel || t('common.contactUs')}</a>
         </div>
       </div>
     </section>
@@ -61,6 +65,12 @@ export function Icon({ name }) {
     audit: <><path d="M6 3h12v18H6zM9 7h6M9 11h6M9 15h3"/></>,
     building: <><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></>,
     workflow: <><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="15" y="15" width="6" height="6" rx="1"/><path d="M9 6h4a4 4 0 0 1 4 4v5M15 18h-4a4 4 0 0 1-4-4V9"/></>,
+    mail: <><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 7 9-7"/></>,
+    chat: <><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.7 8.7 0 0 1-3.6-.8L3 20l1.4-4.2A8.2 8.2 0 0 1 3 11.5a8.6 8.6 0 0 1 18 0Z"/><path d="M8 11h.01M12 11h.01M16 11h.01"/></>,
+    send: <><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></>,
+    demo: <><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M8 20h8M12 16v4M8 12l3-3 2 2 3-4"/></>,
+    target: <><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M15 9l4-4"/></>,
+    check: <><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></>,
   };
   return <svg className="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name] || paths.workflow}</svg>;
 }

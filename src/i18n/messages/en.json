@@ -1,0 +1,142 @@
+{
+  "common": {
+    "requestPilot": "Request a Demo",
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "exploreProduct": "Explore the Product",
+    "skip": "Skip to main content",
+    "openNav": "Open navigation",
+    "closeNav": "Close navigation",
+    "mainNav": "Main navigation",
+    "language": "Language",
+    "buildPilot": "Build the next pilot with us",
+    "defaultCtaTitle": "Ready to modernise daily revenue operations?",
+    "defaultCtaCopy": "Talk to Kahyrah about running a structured council pilot."
+  },
+  "navigation": { "product": "Product", "pilot": "Pilot Programme", "about": "About", "contact": "Contact" },
+  "footer": {
+    "intro": "Kahyrah is a software company designing innovative solutions that simplify operational and financial processes across public and private sector organisations.",
+    "explore": "Explore", "company": "Company", "email": "Email",
+    "product": "Product", "pilot": "Pilot Programme", "about": "About", "contact": "Contact",
+    "privacy": "Privacy Policy", "terms": "Terms of Use",
+    "copyright": "© {{year}} Kahyrah. All rights reserved.",
+    "builtFor": "Better operations. Greater peace of mind."
+  },
+  "meta": {
+    "socialAlt": "Kahyrah Council Revenue Platform across desktop and mobile operational views",
+    "home": { "title": "Council Revenue Management Platform | Kahyrah", "description": "Kahyrah gives councils one connected platform for merchant verification, collections, payment recovery, reconciliation, reporting and audit." },
+    "product": { "title": "Council Revenue Platform | Kahyrah", "description": "Explore Kahyrah’s operational platform for council merchant verification, presence, collections, payment recovery, reconciliation and audit." },
+    "pilot": { "title": "Council Revenue Pilot Programme | Kahyrah", "description": "Run a focused council revenue operations pilot with structured onboarding, field workflows, measurable outcomes and practical support." },
+    "about": { "title": "About Kahyrah | Civic Technology for Councils", "description": "Kahyrah builds practical civic technology that gives councils clearer workflows, operational visibility and reliable revenue data." },
+    "contact": { "title": "Contact Kahyrah | Request a Council Revenue Pilot", "description": "Contact Kahyrah to discuss council revenue operations or request a focused pilot of Council Revenue Platform." },
+    "privacy": { "title": "Privacy Policy | Kahyrah", "description": "How Kahyrah handles information submitted through its marketing website and email enquiries." },
+    "terms": { "title": "Website Terms | Kahyrah", "description": "Terms governing access to and use of the Kahyrah marketing website." }
+  },
+  "home": {
+    "hero": { "eyebrow": "Innovative Software Solutions", "title": "Modern SaaS solutions for operational and financial transformation.", "copy": "Kahyrah designs innovative software solutions that simplify operational and financial processes for public and private organisations. Its flagship product, Council Revenue Platform, gives councils one connected platform for merchant verification, presence management, collections and payment recovery—connecting field operations with revenue reconciliation, operational reporting and complete audit traceability.", "secondary": "Explore Council Revenue Platform", "trust": "Built for council market operations, field teams and revenue supervisors.", "alt": "Kahyrah Council Revenue Platform across operational dashboard, collection workflow and mobile scanning views" },
+    "trust": { "label": "Purpose-built for", "items": ["Local authorities", "Market operations", "Revenue teams", "Public-sector partners"] },
+    "challenge": { "eyebrow": "The operational challenge", "title": "Replace fragmented processes with one connected operational platform.", "copy": "Paper records, spreadsheets and disconnected tools make it difficult to manage field operations, reconcile revenue and confidently close each business day.", "items": [
+      { "title": "Manual revenue reconciliation", "copy": "Disconnected records and spreadsheet totals slow the daily close and make revenue gaps harder to explain." },
+      { "title": "Limited operational visibility", "copy": "Supervisors often see missed presence checks and collection issues too late for effective field action." },
+      { "title": "Fragmented field operations", "copy": "Merchant verification, presence and collections are difficult to coordinate across teams and operating areas." },
+      { "title": "Outstanding payment recovery", "copy": "Failed payments and outstanding amounts can remain disconnected from the operational follow-up needed to resolve them." },
+      { "title": "Limited operational reporting", "copy": "Council leaders lack a timely, trusted view of operational performance, revenue outcomes and accountable action." }
+    ] },
+    "intro": { "eyebrow": "Our flagship product", "title": "Introducing the Council Revenue Platform", "lead": "The Council Revenue Platform is Kahyrah's flagship operational platform, designed to manage the complete daily revenue lifecycle—from merchant onboarding through revenue reconciliation.", "copy": "It connects merchant onboarding, verification, presence tracking, collection workflows, payment recovery, alerts, reconciliation, operational reporting and complete audit traceability in one connected operational platform.", "link": "Explore the Council Revenue Platform", "proof": [{"title":"One connected revenue workflow","copy":"From merchant onboarding to revenue reconciliation"},{"title":"Built for field operations","copy":"Designed around daily local authority operations"}], "alt": "Gallery of Kahyrah dashboard, collection, merchant, mobile scanning, reconciliation and audit views" },
+    "evidence": { "eyebrow": "Product Evidence", "title": "See the platform in action", "copy": "Real operational screens from the Council Revenue Platform, covering field operations, supervision, collections and revenue reconciliation.", "link": "Explore the platform", "items": [
+      {"title":"One operational view for the entire revenue workflow","copy":"Bring together operational dashboards, field collections, revenue reconciliation and mobile workflows in a single connected platform.","alt":"Kahyrah operational dashboard, collection workflow and mobile scanning platform showcase"},
+      {"title":"Nine connected operational modules","copy":"Explore the operational platform spanning merchant management, collections, reconciliation and audit.","alt":"Nine connected Kahyrah product modules for council revenue operations"},
+      {"title":"Field operations across desktop and mobile","copy":"Connect wallet management, merchant presence and QR verification across desktop and mobile workflows.","alt":"Kahyrah wallets, presence and QR assignment workflows across desktop and mobile devices"}
+    ] },
+    "workflow": { "eyebrow": "How It Works", "title": "From council onboarding to daily revenue reconciliation", "items": ["Prepare the onboarding workbook", "Register areas, locations and merchants", "Assign merchants to locations", "Print merchant QR cards", "Field agents scan QR codes each day", "Supervisors review revenue gaps"] },
+    "features": { "eyebrow": "Platform Capabilities", "title": "Built for real field operations", "copy": "Practical workflows for the teams collecting, supervising and reconciling revenue every day.", "items": [
+      {"title":"QR-Based Merchant Verification","copy":"Create a consistent daily verification point for every assigned merchant."}, {"title":"Presence Tracking","copy":"View expected, present and absent merchants for each business day."}, {"title":"Collection Workflow","copy":"Guide field agents from daily collection through supervisor review."}, {"title":"Payment Recovery Monitoring","copy":"Identify failed automatic payments requiring manual intervention."}, {"title":"Alerts Management","copy":"Turn missing confirmations into clear, actionable operational alerts."}, {"title":"Revenue Reconciliation","copy":"Compare expected, collected and outstanding revenue in context."}, {"title":"Operational Business Reporting","copy":"Turn daily operational data into management dashboards and executive-ready reports."}, {"title":"Audit Trail","copy":"Maintain complete traceability across the actions that shape daily revenue operations."}
+    ] },
+    "outcomes": { "eyebrow": "Business Outcomes", "title": "Take control of your daily revenue operations", "copy": "Give field teams, supervisors and council leaders the operational visibility they need to act sooner, resolve issues faster and reconcile revenue with confidence.", "items": [
+      {"title":"Faster daily reconciliation","copy":"Bring expected, collected and outstanding revenue into a single operational view."}, {"title":"Improved operational visibility","copy":"Give supervisors real-time visibility into field activity, merchant presence and operational issues."}, {"title":"Improved payment recovery","copy":"Keep failed payments and outstanding recovery cases visible until they are resolved."}, {"title":"Complete audit trail","copy":"Maintain complete traceability across every operational and financial action."}, {"title":"Operational & executive reporting","copy":"Transform operational activity into management dashboards and executive-ready reports."}, {"title":"Pilot-ready deployment","copy":"Start with a controlled operational scope, structured onboarding and measurable success criteria."}
+    ] },
+    "pilot": { "eyebrow": "Pilot Programme", "title": "Designed for a structured 2–3 week council pilot", "copy": "Launch your pilot with selected operational areas, merchants and field agents. Use the onboarding workbook to configure the platform, generate merchant QR cards, train field teams and monitor daily revenue operations.", "cta": "Request a Demo", "metrics": ["Selected merchants", "Participating field agents", "Council supervisors", "Pilot duration"] },
+    "cta": { "eyebrow": "START YOUR PILOT PROGRAMME", "title": "Run a real operational pilot with your council", "copy": "Evaluate the Council Revenue Platform within your own operational scope, with your field teams and daily revenue processes.", "primary": "Request a Demo", "secondary": "Contact Us" }
+  },
+  "product": {
+    "hero": { "eyebrow": "KAHYRAH'S FLAGSHIP PRODUCT", "title": "Council Revenue Platform", "proposition": "Manage daily council trading-fee operations across the places where merchants trade.", "copy": "From markets and pitches to street-trading locations, the Council Revenue Platform connects merchant assignments, daily attendance, fee collection, payment recovery and revenue reconciliation in one operational platform.", "primary": "Request a Demo", "secondary": "Explore Capabilities", "imageAlt": "Council market trading place with a field officer verifying a merchant pitch using a QR code", "strip": [
+      {"title":"Many trading places","copy":"Markets, pitches, street trading and more","icon":"building"},
+      {"title":"Merchant assignments","copy":"Know who is assigned where and when","icon":"presence"},
+      {"title":"Daily verification","copy":"Confirm attendance using QR in the field","icon":"qr"},
+      {"title":"Fee collection","copy":"Collect daily fees with multiple payment methods","icon":"collection"},
+      {"title":"Revenue reconciliation","copy":"Reconcile expected, collected and outstanding revenue","icon":"chart"},
+      {"title":"Full accountability","copy":"Audit trails, alerts and operational control","icon":"check"}
+    ] },
+    "preview": { "label": "Product preview", "title": "Operational dashboard", "copy": "A single view of expected revenue, collections, presence and open alerts.", "alt": "Kahyrah operations dashboard showing revenue, collections, merchant presence and alerts" },
+    "capabilities": { "eyebrow": "Core Operational Capabilities", "title": "One operational platform for council revenue management", "copy": "The Council Revenue Platform gives councils one connected platform to manage daily revenue operations—from verified field activity and collections through payment recovery, financial reconciliation, management reporting and complete audit traceability.", "items": [
+      {"title":"QR Merchant Verification","copy":"Generate and print durable QR cards for assigned merchants, creating a simple daily verification point for field agents.","alt":"Kahyrah mobile QR scanner beside a council merchant assignment card"},
+      {"title":"Presence Tracking","copy":"Track expected, present and absent merchants by business date—with the operational context supervisors need.","alt":"Kahyrah presence dashboard showing expected, present and absent merchants"},
+      {"title":"Collection Workflow","copy":"Enable agents to record collections, preserve supporting context and submit completed sessions for supervisor review.","alt":"Kahyrah collection workflow for recording and reviewing merchant payments"},
+      {"title":"Payment Recovery Monitoring","copy":"Track failed automatic payments and ensure outstanding recovery amounts remain visible until they are resolved.","alt":"Kahyrah payment recovery monitoring view showing failed payments and outstanding recovery amounts"},
+      {"title":"Alerts Management","copy":"Generate missing merchant alerts, acknowledge follow-up activity and keep open operational issues visible.","alt":"Kahyrah alerts management view showing operational issues and follow-up activity"},
+      {"title":"Revenue Reconciliation","copy":"Compare expected revenue, operational collections and remaining gaps across areas and business dates.","alt":"Kahyrah revenue reconciliation dashboard with totals and merchant collection details"},
+      {"title":"Operational Dashboard","heading":"One view of the day's revenue operations","copy":"Bring together expected revenue, merchant attendance, collection progress, payment recovery and outstanding amounts so supervisors can see where attention is needed.","alt":"Kahyrah operational dashboard showing expected revenue, collections, merchant attendance, payment recovery and alerts","indicators":[
+        {"title":"Expected revenue","copy":"Know what should be collected"},
+        {"title":"Merchant attendance","copy":"See expected, present, pending and absent merchants"},
+        {"title":"Collection progress","copy":"Track automatic, manual and outstanding collection"},
+        {"title":"Payment recovery","copy":"Keep failed payments requiring intervention visible"},
+        {"title":"Operational gaps","copy":"Identify where follow-up is still required"}
+      ]},
+      {"title":"Audit Trail","copy":"Retain traceability for important platform actions and support accountable operational review.","alt":"Kahyrah audit platform showing a traceable history of operational actions"}
+    ] },
+    "supporting": { "label": "Platform layer", "title": "Supporting Platform Capabilities", "badge": "In Development", "capability": "Operational Business Reporting", "copy": "Turn operational data into management and executive dashboards for monitoring revenue, collections, presence and operational performance.", "view": "Executive Overview", "supportingText": "A consolidated management view of key operational and revenue indicators. Additional reporting views are being developed." },
+    "mobile": { "eyebrow": "Built for the field", "title": "Scan, verify and keep moving", "copy": "Fast, focused QR verification gives field agents a clear daily touchpoint while printable cards keep merchant identity and place assignments consistent.", "alt": "Mobile QR verification screen and printable Kahyrah council merchant card" },
+    "cta": { "eyebrow": "Build the next pilot with us", "title": "See Council Revenue Platform in a live pilot", "copy": "Start with a focused operating area and evaluate the workflow using your council’s real pilot data.", "primary": "Request a Demo", "secondary": "Learn More" }
+  },
+  "pilot": {
+    "hero": { "eyebrow": "Pilot Programme", "title": "Run a focused council pilot in 2–3 weeks", "copy": "Evaluate Council Revenue Platform with a controlled operating scope, clear success criteria and hands-on support from onboarding to final review.", "primaryCta": "Request a Demo", "scope": "Typical Pilot Scope", "merchantRange": "20–50", "merchants": "merchants", "agentRange": "1–3", "agents": "field agents", "supervisorRange": "1–2", "supervisors": "supervisors", "weekRange": "2–3", "weeks": "weeks", "note": "Focused, measurable and designed around real council operations." },
+    "includes": { "eyebrow": "A Practical Starting Point", "title": "Everything needed to run the first operating cycle", "items": ["Council onboarding workbook", "QR card generation", "Agent training", "Supervisor training", "Daily operational review", "End-of-pilot review"] },
+    "workflow": { "eyebrow": "Pilot Workflow", "title": "A clear path from pilot definition to evidence", "copy": "Each stage produces a tangible outcome, keeping the pilot focused and easy to evaluate.", "phases": [
+      {"phase":"PREPARE","description":"Set up everything the pilot needs to start strong.","icon":"workflow","steps":[
+        {"number":"1","title":"Pilot scope confirmation","copy":"Confirm the council's operating context, pilot objectives, success criteria and agreed operating scope.","icon":"target"},
+        {"number":"2","title":"Council data onboarding","copy":"Prepare selected areas, places, merchants and users through a structured onboarding workbook.","icon":"building"},
+        {"number":"3","title":"Pilot configuration","copy":"Configure roles, operating areas, expected charges and the workflows the pilot will exercise.","icon":"workflow"},
+        {"number":"4","title":"QR card preparation","copy":"Generate and prepare merchant QR cards for the selected pilot locations.","icon":"qr"}
+      ]},
+      {"phase":"OPERATE","description":"Enable your team and run daily operations.","icon":"presence","steps":[
+        {"number":"5","title":"Team training","copy":"Run focused sessions for field agents and supervisors using realistic daily scenarios.","icon":"presence"},
+        {"number":"6","title":"Daily monitoring","copy":"Review adoption, alerts, collection activity and operational gaps throughout the pilot.","icon":"demo"}
+      ]},
+      {"phase":"EVALUATE","description":"Close the pilot with evidence and clarity on what's next.","icon":"chart","steps":[
+        {"number":"7","title":"Final pilot review","copy":"Assess outcomes, capture learning and define the most sensible next phase.","icon":"audit"}
+      ]}
+    ] },
+    "outcomes": { "eyebrow": "Evidence Over Promises", "title": "Finish with a shared view of what worked", "copy": "The final review brings together operational observations, platform activity and feedback from agents and supervisors—giving decision-makers a practical basis for deciding what comes next." },
+    "cta": { "eyebrow": "Ready to See the Platform in Action?", "title": "Start with a focused demonstration", "copy": "See Council Revenue Platform in action, discuss your operational priorities with Kahyrah and explore whether a focused pilot could be the right next step for your council.", "primary": "Request a Demo", "secondary": "Contact Us" }
+  },
+  "about": {
+    "hero": { "eyebrow": "About Kahyrah", "title": "Building technology around real operational needs", "copy": "Kahyrah designs innovative software solutions that simplify operational and financial processes for public and private organisations. We focus on clear workflows, reliable data and solutions that can evolve as organisations grow.", "belief": "At Kahyrah, we believe technology should bring greater clarity, control and peace of mind to everyday operations. That belief reflects the meaning behind our name: Peace." },
+    "story": { "title": "From operational complexity to practical software", "lead": "Many organisations still manage important operational and financial processes through manual tasks, disconnected systems and fragmented data. These constraints make everyday work harder to coordinate, monitor and improve.", "copy1": "Kahyrah approaches these problems by designing software around the way organisations actually operate. The aim is not technology for its own sake, but practical solutions that simplify workflows, improve visibility and support better operational and financial control.", "copy2": "The Council Revenue Platform is the first commercial expression of that approach. It applies these principles to council revenue operations, connecting field activity, collections, payment recovery, reconciliation, reporting and audit traceability within one operational platform." },
+    "principles": { "eyebrow": "How we work", "title": "Practical software. Built for real operations.", "items": [
+      {"title":"Built around operational needs","copy":"Software should solve real operational problems and make everyday processes clearer, simpler and more dependable."}, {"title":"Practical by design","copy":"We begin with real workflows, operational constraints and measurable needs—not abstract transformation ideas."}, {"title":"Visibility that drives action","copy":"Reliable data should help teams understand what is happening, identify what requires attention and make better operational decisions."}
+    ] },
+    "focus": { "eyebrow": "Our current focus", "title": "Our current focus: modernising council revenue operations", "link": "Explore the Council Revenue Platform", "tags": ["Council operations", "Revenue visibility", "Field operations", "Revenue collection", "Payment recovery", "Reconciliation and reporting"] },
+    "cta": { "eyebrow": "Build the next pilot with us", "title": "Let’s improve your council operations together", "copy": "Talk to Kahyrah about the operational challenges your council is ready to modernise.", "primary": "Request a Demo", "secondary": "Contact Us" }
+  },
+  "contact": {
+    "eyebrow": "Contact Kahyrah", "title": "Start a conversation with Kahyrah", "copy": "Interested in seeing how Council Revenue Platform could support your council operations? Request a demo and talk to Kahyrah about your current processes, operational challenges and priorities.",
+    "demoEnquiries": "Demo enquiries", "generalEnquiries": "General enquiries",
+    "journey": { "eyebrow": "From Demo to Pilot", "items": [
+      { "title": "Request a demo", "copy": "Tell us about your council and what you would like to improve." },
+      { "title": "Discovery conversation", "copy": "We discuss your current operations, challenges and priorities." },
+      { "title": "Platform demonstration", "copy": "We show how Council Revenue Platform could support those operations." },
+      { "title": "Define a pilot", "copy": "If there is a good fit, we agree a focused scope, objectives and practical next steps." },
+      { "title": "Run the pilot", "copy": "Your council evaluates the platform against real operational needs." }
+    ], "privacyNote": "Your data is never stored on this website. Your message is sent securely via your email client." },
+    "form": { "eyebrow": "Request a Demo", "title": "Tell us about your council", "copy": "Complete the form and your email client will prepare a message to our team.", "name": "Name", "namePlaceholder": "Your full name", "organisation": "Organisation", "organisationPlaceholder": "Council or organisation", "email": "Email", "emailPlaceholder": "name@organisation.gov", "message": "Message", "messagePlaceholder": "Tell us about your current operations, challenges or what you would like to see in the demo", "cta": "Request a Demo", "status": "Your email application should now open with the message prepared.", "note": "For V1, this secure static form opens your email client. No information is stored on this website.", "subject": "Kahyrah demo request from {{organisation}}", "emailBody": "Name: {{name}}\nOrganisation: {{organisation}}\nEmail: {{email}}\n\n{{message}}" }
+  },
+  "legal": {
+    "eyebrow": "Legal", "updated": "Last updated: 2 July 2026",
+    "privacy": { "title": "Privacy Policy", "intro": "How information is handled when you visit the Kahyrah website or contact our team.", "sections": [
+      {"title":"Information you provide","copy":"The website contact form prepares an email in your email application. Kahyrah does not store form entries on this website. If you send us an email, we use the information you provide to respond to your enquiry and manage relevant follow-up."}, {"title":"Website services","copy":"This website may load essential resources, such as web fonts, from third-party infrastructure. Those providers may process limited technical information required to deliver the resource."}, {"title":"Sharing and retention","copy":"We do not sell personal information. Enquiry information is shared only where needed to respond, operate our business or meet legal obligations, and is retained only for as long as reasonably necessary."}, {"title":"Your choices","copy":"You may ask about, correct or request deletion of information you have provided by contacting"}
+    ] },
+    "terms": { "title": "Website Terms", "intro": "Terms governing access to and use of the Kahyrah marketing website.", "sections": [
+      {"title":"Website information","copy":"This website provides general information about Kahyrah and Council Revenue Platform. It does not constitute a binding offer, procurement commitment or professional advice."}, {"title":"Acceptable use","copy":"You may use this website for lawful informational and business-enquiry purposes. You must not interfere with its operation, attempt unauthorised access or misuse its content."}, {"title":"Intellectual property","copy":"Unless stated otherwise, the website, brand, copy, product visuals and related materials belong to Kahyrah or its licensors and may not be reproduced without permission."}, {"title":"Availability and liability","copy":"We aim to keep website information accurate and available, but it may change and uninterrupted access is not guaranteed. To the extent permitted by law, Kahyrah is not responsible for loss arising solely from reliance on this marketing website."}, {"title":"Contact","copy":"Questions about these terms can be sent to"}
+    ] }
+  }
+}
