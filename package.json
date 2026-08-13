@@ -11,10 +11,11 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "^6.0.1",
-    "vite": "^8.0.9",
+    "i18next": "^26.3.4",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
-    "react-router-dom": "^7.14.2"
-  },
-  "devDependencies": {}
+    "react-i18next": "^17.0.8",
+    "react-router-dom": "^7.14.2",
+    "vite": "^8.0.9"
+  }
 }
